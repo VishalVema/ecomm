@@ -1,6 +1,6 @@
+"use strict";
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+import './styles/header.scss';
 
 class Header extends React.Component {
 
@@ -8,11 +8,11 @@ class Header extends React.Component {
 
     const logo_name = this.props.logo;
 
-    return ( 
-      <div>
-      
+    return (
+      <div className="valign-wrapper">
+
         <nav>
-          <div className="nav-wrapper">
+          <div className="nav-wrapper header-backgroud-color">
             <a href="#!" className="brand-logo">{logo_name}</a>
             <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
             <ul className="right hide-on-med-and-down">
@@ -34,4 +34,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export {Header};

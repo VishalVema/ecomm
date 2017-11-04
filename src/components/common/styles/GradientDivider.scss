@@ -1,0 +1,9 @@
+.gradient-pattern{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433583+0,433583+12,433583+17,6b79b7+75,96b8de+100 */
+  background: rgb(67,53,131); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(67,53,131,1) 0%, rgba(67,53,131,1) 12%, rgba(67,53,131,1) 17%, rgba(107,121,183,1) 75%, rgba(150,184,222,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(67,53,131,1) 0%,rgba(67,53,131,1) 12%,rgba(67,53,131,1) 17%,rgba(107,121,183,1) 75%,rgba(150,184,222,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(67,53,131,1) 0%,rgba(67,53,131,1) 12%,rgba(67,53,131,1) 17%,rgba(107,121,183,1) 75%,rgba(150,184,222,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433583', endColorstr='#96b8de',GradientType=1 ); /* IE6-9 */
+  height: 300px;
+}
