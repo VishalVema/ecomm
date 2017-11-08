@@ -1,7 +1,14 @@
-import React from 'react';
+import React from 'react'
+import { Card, Filter } from './common'
 
 const List = () => {
-  return (<h1>hello</h1>);
+  return (
+    <div className='row'>
+      <Filter />
+      <Card />
+    </div>
+
+  )
 }
 
-export default List;
+export default List

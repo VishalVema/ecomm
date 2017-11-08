@@ -1,12 +1,13 @@
-"use strict";
-import React, {Component} from 'react';
+'use strict'
+import React, {Component} from 'react'
+import './styles/footer.scss'
 
 
 
 class Footer extends Component{
   render(){
     return(
-      <footer className="page-footer">
+      <footer className="page-footer  footer-background">
           <div className="container">
             <div className="row">
               <div className="col l6 s12">

@@ -1,22 +1,19 @@
 "use strict";
 import React from 'react';
 import { Link } from 'react-router-dom'
-import './styles/header.scss';
-
+import './styles/header.scss'
 
 class Header extends React.Component {
-
-  render() {
-
-    const logo_name = this.props.logo;
+  render () {
+    const logoName = this.props.logo;
 
     return (
 
         <div className="valign-wrapper">
 
           <nav>
-            <div className="nav-wrapper header-backgroud-color">
-              <a href="#!" className="brand-logo">{logo_name}</a>
+            <div className="nav-wrapper  yellow darken-2">
+              <Link to="/" className="brand-logo">{logoName}</Link>
               <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down">
                 <li><a href="sass.html">Sass</a></li>
@@ -34,7 +31,7 @@ class Header extends React.Component {
             </div>
           </nav>
         </div>
-    
+
     );
   }
 }
