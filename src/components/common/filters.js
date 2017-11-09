@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { RangeSlider } from './'
 import './styles/Filters.scss'
 
 class Filter extends Component {
@@ -16,7 +17,7 @@ class Filter extends Component {
             <div>Alvin<a href='#!' className='secondary-content'><i className='material-icons'>send</i></a></div>
           </li>
           <li className='collection-item dismissable'>
-            <div>Alvin<a href='#!' className='secondary-content'><i className='material-icons'>send</i></a></div>
+            <RangeSlider />
           </li>
         </ul>
       </div>
