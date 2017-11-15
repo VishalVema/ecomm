@@ -10,11 +10,7 @@ class Filter extends Component {
         <ul className='collection'>
           <li className='collection-item dismissable'>
             <h5> Brand </h5>
-            <CheckBox keyProps={1} CheckBoxLabel='Puma' />
-            <CheckBox keyProps={2} CheckBoxLabel='Reebok' />
-            <CheckBox keyProps={3} CheckBoxLabel='Adidas' />
-            <CheckBox keyProps={4} CheckBoxLabel='Woodland' />
-            <CheckBox keyProps={5} CheckBoxLabel='Puma' />
+            <CheckBox />
           </li>
           <li className='collection-item dismissable'>
             <h5> Discount </h5>
