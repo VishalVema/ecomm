@@ -30,36 +30,40 @@ class CheckBox extends Component {
   }
 
 
-  handleCheckBox (label) {
-    //console.log(label)
+  handleCheckBox (label,e) {
+    //e.preventDefault()
+    console.log(label)
   }
 
   fuck (hey,e){
     e.preventDefault()
-
+    //console.log(e)
     //console.log(hey)
     let index = hey-1
-
+    //console.log(hey)
     let curState = this.state.label
+    //curState[index].checked = 'on'
+    //this.refs.checkbox.checked
+    //console.log(document.getElementsByClassName(hey).checked)
+    //console.log(ReactDOM.findDOMNode(this).parentNode.getElementsByClassName(hey)[0].checked)
+    let chec = ReactDOM.findDOMNode(this).parentNode.getElementsByClassName(hey)[0].checked
 
-    curState[index].checked = 'on'
-    this.refs.checkbox.checked
-    console.log(ReactDOM.findDOMNode(this.refs.checkbox))
-     this.setState({
-       label: curState
-     })
+    chec = !chec
+
+    ReactDOM.findDOMNode(this).parentNode.getElementsByClassName(hey)[0].checked = chec
+
+
+
     //this.state.label[hey - 1].checked
     //checked = this.refs.checkbox
   }
 
   render () {
 
-    let checker
-
     var items = this.state.label.map((label, i) => {
       return (
-        <p key={label.label1} onClick={this.fuck.bind(this, label.label1)} >
-        <input key={label.label2} ref='checkbox' type='checkbox' onChange={this.handleCheckBox} className={`filled-in ${label}`} id='filled-in-box' />
+        <p key={label.label1} onClick={this.fuck.bind(this, label.label2)} >
+        <input key={label.label2} ref='checkbox' type='checkbox' onChange={this.handleCheckBox} className={`filled-in ${label.label2}`} id='filled-in-box' />
         <label key={label.label3} htmlFor='filled-in-box'>{label.label2}-{i}</label>
         </p>
 
