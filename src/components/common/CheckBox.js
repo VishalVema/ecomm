@@ -4,31 +4,11 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
 class CheckBox extends Component {
-  constructor () {
-    super()
-    this.state = {
-          label: [{
-            label1: '1',
-            label2: 'kakdhf',
-            label3: 'asdhn',
-            checked: 'off'
-          },
-          {
-            label1: '2',
-            label2: 'fdsaf',
-            label3: 'asczvdhn',
-            checked: 'off'
-          },
-          {
-            label1: '3',
-            label2: 'kakzbvcdhf',
-            label3: 'aszxcvdhn',
-            checked: 'off'
-          }
-          ]
-    }
-  }
+  constructor (props) {
+    super(props)
+    this.state = {label: this.props.label}
 
+}
 
   handleCheckBox (label,e) {
     //e.preventDefault()
@@ -42,8 +22,12 @@ class CheckBox extends Component {
     let index = hey-1
     //console.log(hey)
     let curState = this.state.label
-    //curState[index].checked = 'on'
+    curState[0].label2 = 'Hello world'
     //this.refs.checkbox.checked
+
+    this.setState({
+      label : curState
+    })
     //console.log(document.getElementsByClassName(hey).checked)
     //console.log(ReactDOM.findDOMNode(this).parentNode.getElementsByClassName(hey)[0].checked)
     let chec = ReactDOM.findDOMNode(this).parentNode.getElementsByClassName(hey)[0].checked
@@ -52,7 +36,7 @@ class CheckBox extends Component {
 
     ReactDOM.findDOMNode(this).parentNode.getElementsByClassName(hey)[0].checked = chec
 
-
+    console.log(curState)
 
     //this.state.label[hey - 1].checked
     //checked = this.refs.checkbox
@@ -60,11 +44,13 @@ class CheckBox extends Component {
 
   render () {
 
-    var items = this.state.label.map((label, i) => {
+
+    var items = this.state.label.map((data, i) => {
       return (
-        <p key={label.label1} onClick={this.fuck.bind(this, label.label2)} >
-        <input key={label.label2} ref='checkbox' type='checkbox' onChange={this.handleCheckBox} className={`filled-in ${label.label2}`} id='filled-in-box' />
-        <label key={label.label3} htmlFor='filled-in-box'>{label.label2}-{i}</label>
+        <p key={data.label1} onClick={this.fuck.bind(this, data.label2)} >
+        <input key={data.label2} ref='checkbox' type='checkbox' onChange={this.handleCheckBox} className={`filled-in ${data.label2}`} id='filled-in-box' />
+        <label key={data.label3} htmlFor='filled-in-box'>{data.label2}-{i}</label>
+
         </p>
 
       )

@@ -4,13 +4,38 @@ import './styles/Filters.scss'
 
 class Filter extends Component {
 
+  constructor(){
+    super ()
+    this.state = {
+          label: [{
+            label1: '1',
+            label2: 'kakdhf',
+            label3: 'asdhn',
+            checked: 'off'
+          },
+          {
+            label1: '2',
+            label2: 'fdsaf',
+            label3: 'asczvdhn',
+            checked: 'off'
+          },
+          {
+            label1: '3',
+            label2: 'kakzbvcdhf',
+            label3: 'aszxcvdhn',
+            checked: 'off'
+          }
+          ]
+    }
+  }
+
   render () {
     return (
       <div className='col l3 sidebar-shadow'>
         <ul className='collection'>
           <li className='collection-item dismissable'>
             <h5> Brand </h5>
-            <CheckBox />
+            <CheckBox label={this.state.label} />
           </li>
           <li className='collection-item dismissable'>
             <h5> Discount </h5>

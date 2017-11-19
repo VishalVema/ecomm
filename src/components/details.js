@@ -2,24 +2,27 @@ import React, { Component } from 'react'
 
 
 class Detail extends Component {
-  constructor(){
-    super()
-    this.state = {
-      label: ['asjdh', 'kakdhf', 'asdhn', 'sdjakh']
-    }
+  state = {
+        label: 'hello'
+      }
+
+  handleClick = () => {
+  this.setState({
+      label: 'hello world'
+  });
   }
 
-  handleClick (labels){
-  //  console.log(labels)
-  }
   render () {
-    let List = this.state.label.map((labels, i) => {
-      return <li key={labels} onClick={this.handleClick.bind(this, labels)}>{labels}</li>
-    })
     return (
-      <ul>
-        {List}
-      </ul>
+      <div>
+       <button onClick={this.handleClick}>
+         Button 1
+       </button>
+
+       <h1>{this.state.text}</h1>
+       <h1>{this.state.label}</h1>
+     </div>
+
     )
   }
 }
